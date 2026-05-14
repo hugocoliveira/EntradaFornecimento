@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.entrada.fornecimento.app-debug-38:/xml_backup_rules.xml.flat",
+        "source": "com.entrada.fornecimento.app-main-40:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.entrada.fornecimento.app-debug-38:/xml_data_extraction_rules.xml.flat",
+        "source": "com.entrada.fornecimento.app-main-40:/xml/data_extraction_rules.xml"
+    }
+]

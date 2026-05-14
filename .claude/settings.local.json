@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Find F:\\\\LIT_ANDROID\\\\aplicacaoMenuAutomatico\\\\app\\\\src\\\\main\\\\java -type f -name \"*.kt\")",
+      "PowerShell(F:\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe install -r \"F:\\\\LIT_ANDROID\\\\EntradaFornecimento\\\\app\\\\build\\\\outputs\\\\apk\\\\debug\\\\app-debug.apk\" 2>&1)",
+      "PowerShell(F:\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe install -r \"F:\\\\LIT_ANDROID\\\\aplicacaoMenuAutomatico\\\\app\\\\build\\\\outputs\\\\apk\\\\debug\\\\app-debug.apk\" 2>&1)",
+      "PowerShell(Get-ChildItem -Recurse \"F:\\\\LIT_ANDROID\\\\EntradaTransporte\" | Where-Object { !$_.PSIsContainer } | Select-Object -ExpandProperty FullName)",
+      "PowerShell(F:\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe install -r \"F:\\\\LIT_ANDROID\\\\EntradaTransporte\\\\app\\\\build\\\\outputs\\\\apk\\\\debug\\\\app-debug.apk\" 2>&1)",
+      "PowerShell(F:\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe shell am start -n com.entrada.transporte/.MainActivity 2>&1)"
+    ]
+  }
+}
