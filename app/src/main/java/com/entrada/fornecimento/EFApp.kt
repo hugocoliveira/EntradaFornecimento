@@ -22,7 +22,7 @@ class EFApp : Application() {
             config = UpdateConfig(
                 githubOwner = "hugocoliveira",
                 githubRepo  = "EntradaFornecimento",
-                githubToken = "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"
+                githubToken = "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"
             )
         )
     }
