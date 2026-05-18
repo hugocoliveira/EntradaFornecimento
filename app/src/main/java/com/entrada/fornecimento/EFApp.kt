@@ -1,6 +1,7 @@
 package com.entrada.fornecimento
 
 import android.app.Application
+import com.entrada.fornecimento.BuildConfig
 import com.updater.lib.AppUpdateChecker
 import com.updater.lib.UpdateConfig
 
@@ -22,7 +23,7 @@ class EFApp : Application() {
             config = UpdateConfig(
                 githubOwner = "hugocoliveira",
                 githubRepo  = "EntradaFornecimento",
-                githubToken = "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"
+                githubToken = BuildConfig.GITHUB_TOKEN.takeIf { it.isNotEmpty() }
             )
         )
     }
