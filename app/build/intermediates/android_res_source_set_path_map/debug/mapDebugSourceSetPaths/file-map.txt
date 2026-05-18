@@ -1,7 +1,0 @@
-com.entrada.fornecimento.app-pngs-0 F:\LIT_ANDROID\EntradaFornecimento\app\build\generated\res\pngs\debug
-com.entrada.fornecimento.app-updated_navigation_xml-1 F:\LIT_ANDROID\EntradaFornecimento\app\build\generated\updated_navigation_xml\debug
-com.entrada.fornecimento.app-packageDebugResources-2 F:\LIT_ANDROID\EntradaFornecimento\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.entrada.fornecimento.app-packageDebugResources-3 F:\LIT_ANDROID\EntradaFornecimento\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.entrada.fornecimento.app-debug-4 F:\LIT_ANDROID\EntradaFornecimento\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.entrada.fornecimento.app-debug-5 F:\LIT_ANDROID\EntradaFornecimento\app\src\debug\res
-com.entrada.fornecimento.app-main-6 F:\LIT_ANDROID\EntradaFornecimento\app\src\main\res

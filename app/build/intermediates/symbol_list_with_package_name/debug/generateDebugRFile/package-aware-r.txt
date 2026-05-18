@@ -1,5 +1,0 @@
-com.entrada.fornecimento
-string app_name
-style Theme_EntradaFornecimento
-xml backup_rules
-xml data_extraction_rules
