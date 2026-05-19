@@ -4,15 +4,15 @@ plugins {
 }
 
 
+// Lê o token do GitHub de local.properties (não commitado no git)
+val localProps = java.util.Properties().apply {
+    val f = rootProject.file("local.properties")
+    if (f.exists()) load(f.inputStream())
+}
+
 android {
     namespace = "com.entrada.fornecimento"
     compileSdk = 36
-
-    // Lê o token do GitHub de local.properties (não commitado no git)
-    val localProps = java.util.Properties().apply {
-        val f = rootProject.file("local.properties")
-        if (f.exists()) load(f.inputStream())
-    }
 
     defaultConfig {
         applicationId = "com.entrada.fornecimento"
