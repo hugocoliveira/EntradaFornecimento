@@ -8,6 +8,7 @@ import android.content.IntentFilter
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
+import android.provider.Settings
 import android.util.Log
 import android.widget.Toast
 import androidx.core.content.FileProvider
@@ -92,6 +93,23 @@ class ApkDownloadReceiver : BroadcastReceiver() {
             return
         }
 
+        // Android 8.0+ exige permissão explícita para instalar fontes desconhecidas
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O &&
+            !context.packageManager.canRequestPackageInstalls()
+        ) {
+            Toast.makeText(
+                context,
+                "Permita a instalação de apps desconhecidos nas configurações",
+                Toast.LENGTH_LONG
+            ).show()
+            val settingsIntent = Intent(
+                Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,
+                Uri.parse("package:${context.packageName}")
+            ).apply { flags = Intent.FLAG_ACTIVITY_NEW_TASK }
+            context.startActivity(settingsIntent)
+            return
+        }
+
         val uri: Uri = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             FileProvider.getUriForFile(context, "${context.packageName}.updater.provider", file)
         } else {
@@ -106,7 +124,8 @@ class ApkDownloadReceiver : BroadcastReceiver() {
         try {
             context.startActivity(installIntent)
         } catch (e: Exception) {
-            Toast.makeText(context, "Erro ao instalar", Toast.LENGTH_LONG).show()
+            Log.e(TAG, "Erro ao iniciar instalação", e)
+            Toast.makeText(context, "Erro ao instalar: ${e.message}", Toast.LENGTH_LONG).show()
         }
     }
 
