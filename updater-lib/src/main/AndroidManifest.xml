@@ -11,7 +11,7 @@
 
         <receiver
             android:name="com.updater.lib.ApkDownloadReceiver"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.updater.lib.DOWNLOAD_APK" />
                 <action android:name="com.updater.lib.DISMISS_UPDATE" />
